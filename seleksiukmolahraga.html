@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Seleksi UKM Olahraga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Berikut Hasilnya</h1>
+
+<script>
+  // Function untuk menampilkan pesan berdasarkan input pengguna
+  function tampilkanPesan(nama, usia) {
+    if (usia >= 18) {
+      document.write("Halo, " + nama + "! Anda adalah seorang Dewasa.");
+    } else if (usia >= 13) {
+      document.write("Halo, " + nama + "! Anda adalah seorang Remaja.");
+    } else if (usia >= 6) {
+      document.write("Halo, " + nama + "! Anda adalah seorang Anak-Anak.");
+    } else if (usia >= 0) {
+      document.write("Halo, " + nama + "! Anda adalah seorang Balita.");
+    } else {
+      document.write("Usia tidak valid.");
+    }
+  }
+
+  // Function untuk menentukan jenis kelamin
+  function tentukanJenisKelamin(jenisKelamin) {
+    if (jenisKelamin === "Laki-laki" || jenisKelamin === "Perempuan") {
+      return jenisKelamin;
+    } else {
+      return "Jenis kelamin tidak valid";
+    }
+  }
+
+  // Contoh penggunaan function
+  var nama = prompt("Masukkan nama Anda:");
+  var usia = parseInt(prompt("Masukkan usia Anda:"));
+  var jenisKelamin = prompt("Masukkan jenis kelamin Anda (Laki-laki/Perempuan):");
+
+  var jenisKelaminValid = tentukanJenisKelamin(jenisKelamin);
+
+  if (jenisKelaminValid === "Jenis kelamin tidak valid") {
+    document.write("Jenis kelamin tidak valid.");
+  } else { 
+    tampilkanPesan(nama, usia);
+  }
+
+  // Nested if untuk menampilkan pesan tambahan
+  if (usia >= 18) {
+    if (jenisKelamin === "Laki-laki") {
+      document.write("<br>Anda bisa bergabung dengan klub sepak bola Dewasa.");
+    } else if (jenisKelamin === "Perempuan") {
+      document.write("<br>Anda bisa bergabung dengan klub voli Dewasa.");
+    }
+  }
+
+  // Nested if untuk menampilkan pesan tambahan
+  if (usia >= 13) {
+    if (jenisKelamin === "Laki-laki") {
+      document.write("<br>Anda bisa bergabung dengan klub sepak bola Remaja.");
+    } else if (jenisKelamin === "Perempuan") {
+      document.write("<br>Anda bisa bergabung dengan klub voli Remaja.");
+    }
+  }
+
+  // Nested if untuk menampilkan pesan tambahan
+  if (usia >= 6)
+  if (usia <=12) {
+  if (jenisKelamin === "Laki-laki") {
+      document.write("<br>Anda bisa bergabung dengan klub sepak bola Anak-Anak.");
+    } else if (jenisKelamin === "Perempuan") {
+      document.write("<br>Anda bisa bergabung dengan klub voli Anak-Anak.");
+    }
+  }
+
+  // Nested if untuk menampilkan pesan tambahan
+  if (usia <= 6) {
+    if (jenisKelamin === "Laki-laki") {
+      document.write("<br>Maaf Anda Tidak bisa bergabung dengan klub sepak bola Dewasa, Remaja atau Anak-Anak.");
+    } else if (jenisKelamin === "Perempuan") {
+      document.write("<br>Maaf Anda Tidak bisa bergabung dengan klub voli Dewasa, Remaja atau Anak-Anak.");
+    }
+  }
+
+  // Check usia pengguna
+  if (usia >= 6)
+  if (jenisKelamin === "Laki-laki" || jenisKelamin === "Perempuan") {
+    // Menampilkan pesan tentang pemilihan angka ganjil
+    angka = 1;
+    document.write("<br>Silahkan pilih angka ganjil untuk nomor punggung dari 1 hingga 9:");
+    do {
+      document.write(" " + angka);
+      angka += 2;
+    } while (angka <= 9);
+
+    // Menampilkan pesan tentang pemilihan angka genap
+    angka = 2;
+    document.write("<br>Silahkan pilih angka genap untuk nomor punggung dari 2 hingga 10:");
+    while (angka <= 10) {
+      document.write(" " + angka);
+      angka += 2;
+    }
+  }
+</script>
+
+</body>
+</html>
